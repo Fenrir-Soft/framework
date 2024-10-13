@@ -1,4 +1,23 @@
-#!/usr/bin/php
+#!/usr/bin/env php
 <?php
 
-exec("php -S 0.0.0.0:0 ".__DIR__."/router.php");
+$options = getopt("H::p::h", [
+    'host::',
+    'port::',
+    'help'
+]);
+
+$hostname = isset($options['H'])?$options['H']:(isset($options['host'])?$options['host']:'0.0.0.0');
+$port = isset($options['p'])?$options['p']:(isset($options['port'])?$options['port']:'0');
+$help = isset($options['h'])?true:(isset($options['help'])?true:false);
+
+if ($help) {
+    echo "Usage:\n";
+    echo "-p    --port=[PORT_NUMBER]    Port number to listen, defaults to 0\n";
+    echo "-H    --host=[HOSTNAME]       Hostname to listen, default to 0.0.0.0\n";
+    echo "-h    --help                  Shows this screen\n";
+
+    exit;
+}
+
+exec("php -S {$hostname}:{$port} ".__DIR__."/router.php");
