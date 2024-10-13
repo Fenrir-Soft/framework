@@ -48,7 +48,10 @@ return [
             }
         }
 
-        $paths[] = dirname(__DIR__) . '/views';
+        $views_folder = dirname(__DIR__) . '/views';
+        if (file_exists($views_folder)) {
+            $paths[] = dirname(__DIR__) . '/views';
+        }
 
 
         return new FilesystemLoader($paths);
