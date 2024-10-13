@@ -1,0 +1,37 @@
+{
+    "name": "fenrir/framework",
+    "version": "1.0.0",
+    "type": "library",
+    "bin": ["bin/serve"],
+    "authors": [
+        {
+            "name": "Fábio Dias",
+            "email": "contato@fenrirsoft.com.br",
+            "homepage": "https://fenrirsoft.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Fenrir\\Framework\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.2"
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6",
+        "php-di/php-di": "^7.0",
+        "symfony/framework-bundle": "^7.1",
+        "symfony/uid": "^7.1",
+        "doctrine/dbal": "^4.1",
+        "twig/twig": "^3.14",
+        "diasfs/twig-relative-path": "^1.0",
+        "rybakit/twig-deferred-extension": "^3.0",
+        "guzzlehttp/guzzle": "^7.9",
+        "symfony/routing": "^7.1",
+        "symfony/console": "^7.1",
+        "symfony/mime": "^7.1"
+    }
+}

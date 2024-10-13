@@ -1,0 +1,4 @@
+#!/usr/bin/php
+<?php
+
+exec("php -S 0.0.0.0:0 ".__DIR__."/router.php");
