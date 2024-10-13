@@ -14,7 +14,8 @@ class Request extends HttpRequest
         }
         
         $base = rtrim(dirname(dirname($_SERVER['SCRIPT_NAME'])), '/') . '/';
-        $_SERVER['SCRIPT_NAME'] = $base . 'index.php';
+        $_SERVER['REQUEST_URI'] = str_replace(rtrim($base, '/'), '', $_SERVER['REQUEST_URI']);
+        
         $request =  parent::createFromGlobals();
         try {
             if ($request->getContentTypeFormat() == 'json') {
