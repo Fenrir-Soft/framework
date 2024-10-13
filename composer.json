@@ -1,5 +1,5 @@
 {
-    "name": "fenrir/framework",
+    "name": "fenrir-soft/framework",
     "version": "1.0.0",
     "type": "library",
     "bin": ["bin/serve"],
