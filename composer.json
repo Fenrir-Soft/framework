@@ -2,6 +2,7 @@
     "name": "fenrir-soft/framework",
     "version": "1.0.0",
     "type": "library",
+    "license": "MIT",
     "bin": ["bin/serve"],
     "authors": [
         {
